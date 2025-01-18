@@ -1,0 +1,154 @@
+.cardsSection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: clamp(20px, 3vw, 40px);
+    padding: clamp(30px, 5vw, 60px);
+    margin: clamp(-180px, -18vw, -210px) auto 40px;
+    max-width: 1200px;
+    width: calc(100% - clamp(40px, 5vw, 80px));
+    background: var(--bg-white);
+    border-radius: clamp(16px, 2vw, 20px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.serviceCard {
+    flex: 1 1 calc(33.333% - 40px);
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: clamp(20px, 3vw, 30px);
+    background: var(--bg-white);
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.serviceCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.serviceCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(66, 153, 225, 0.2);
+}
+
+.serviceCard:hover::before {
+    opacity: 1;
+}
+
+.cardIcon {
+    width: clamp(70px, 10vw, 90px);
+    height: clamp(70px, 10vw, 90px);
+    min-width: clamp(70px, 10vw, 90px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.cardIcon::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center, 
+        rgba(255,255,255,0.2) 0%, 
+        rgba(255,255,255,0) 70%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.serviceCard:hover .cardIcon::after {
+    opacity: 1;
+}
+
+.cardIcon img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.serviceCard:hover .cardIcon img {
+    transform: scale(1.1);
+}
+
+.serviceCard h3 {
+    font-size: clamp(18px, 3vw, 22px);
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    transition: color 0.3s ease;
+}
+
+.serviceCard:hover h3 {
+    color: #4299E1;
+}
+
+.serviceCard p {
+    font-size: clamp(14px, 2.5vw, 16px);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.serviceCard:hover p {
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .serviceCard {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 576px) {
+    .cardsSection {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .serviceCard {
+        flex: 1 1 100%;
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cardIcon {
+        margin-bottom: 0;
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+}
