@@ -1,8 +1,11 @@
-# React + Vite
+![Landing Page Preview](./src/img/Care.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+We take good care of your pet Landing Page This is a replication of a landing page design from Figma, created as a practice project for my front-end development portfolio.
 
-Currently, two official plugins are available:
+✨ Features Fully responsive layout. Built with HTML, CSS, JavaScript, and React. Implements modern front-end best practices. Developed to enhance my skills in converting Figma designs to code.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎯 Purpose The project was developed to:
+
+Practice translating Figma designs into a functional and responsive web page. Strengthen my skills in React and JavaScript. Add a professional-looking project to my portfolio as a front-end developer.
+
+📌 Design Reference The original design can be found on Figma. (https://www.figma.com/design/KGgih4S1ICfsWgwL3Tpo7j/50%2B-Landing-page-designs-(Community)?node-id=801-2256&p=f&t=OixhGBpJxuA920E2-0) 
