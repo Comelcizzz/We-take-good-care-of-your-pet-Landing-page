@@ -1,4 +1,5 @@
-![Landing Page Preview](./src/img/Care.png)
+## 📸 Project Preview
+![Landing Page Preview](./src/assets/Care.png)
 
 We take good care of your pet Landing Page This is a replication of a landing page design from Figma, created as a practice project for my front-end development portfolio.
 
